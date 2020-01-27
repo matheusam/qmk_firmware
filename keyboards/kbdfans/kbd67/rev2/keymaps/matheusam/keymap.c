@@ -35,13 +35,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 #ifdef RGBLIGHT_ENABLE
     switch (get_highest_layer(state)) {
       case 0:
-        rgblight_sethsv_range(68, 100, 49, 0, RGBLED_NUM);
+        rgblight_sethsv_range(HSV_YELLOW, 0, RGBLED_NUM);
         break;
       default:
-        rgblight_sethsv_range(90, 100, 49, 0, RGBLED_NUM);
+        rgblight_sethsv_range(HSV_GREEN, 0, RGBLED_NUM);
         break;
     }
-    rgblight_set_effect_range(2, 8);
+    rgblight_set_effect_range(0, 16);
 #endif
 return state;
 }
