@@ -37,8 +37,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
 	[COMMAND] = LAYOUT_65_ansi(KC_GRV, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DEL, KC_INS,
 											 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_PSCR, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-											 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RGB_TOG, UC(0x005E), UC(0x00B4), KC_TRNS, KC_TRNS,
-											 KC_TRNS, KC_TRNS, KC_TRNS, UC(0x00E7), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLU, KC_TRNS,
+											 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RGB_TOG, UC(0X005E), UC(0X00B4), KC_TRNS, KC_TRNS,
+											 KC_TRNS, KC_TRNS, KC_TRNS, UC(0X00E7), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLU, KC_TRNS,
 											 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BRID, KC_VOLD, KC_BRIU)
 };
 
@@ -48,10 +48,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       case BASE:
         rgblight_sethsv_range(HSV_GREEN, 0, RGBLED_NUM);
         break;
-			case COMMAND:
-        rgblight_sethsv_range(HSV_RED, 0, RGBLED_NUM);
-        break;
-      default:
+			default:
         rgblight_sethsv_range(HSV_YELLOW, 0, RGBLED_NUM);
         break;
     }
