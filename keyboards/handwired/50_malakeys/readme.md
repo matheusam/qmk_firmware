@@ -2,6 +2,8 @@
 
 Just other cheap jj_50 clone.
 
+Keycaps used in this project: [DSA Style Keycaps by junaling - thingiverse](https://www.thingiverse.com/thing:4108829)
+
 ## Flashing
 
 `make handwired/50_malakeys:default:avrdude`
