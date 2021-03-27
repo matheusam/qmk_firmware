@@ -1,12 +1,12 @@
 # 50_malakeys
 
-## Flashing
-
 Just other cheap jj_50 clone.
 
-Short the arduino pins RST to GND quickly and it should enter into bootloader mode. After that just run:
+## Flashing
 
-`make handwired/50_malakeys:default:flash`
+`make handwired/50_malakeys:default:avrdude`
+
+When asked to, short the arduino pins RST to GND quickly and it should enter into bootloader mode and start to write.
 
 ## keymaps
 
